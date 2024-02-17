@@ -17,7 +17,7 @@ def wordBreak(words, word, out=''):
         scorey = score(words, out)
         if persistent_data["best_score"] < scorey:
             persistent_data["best_score"] = scorey
-            persistent_data["best_string"] = out
+            persistent_data["best_string"] = out.strip()
         return
     for i in range(1, len(word) + 1):
         prefix = word[:i]
